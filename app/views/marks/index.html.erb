@@ -1,0 +1,33 @@
+<h1>Marks</h1>
+
+<p><a href="/new_mark">Add a New Mark</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Url</th>
+      <th>Description</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @marks.each do |mark| %>
+    <tr>
+          <td><%= mark.name %></td>
+          <td><%= mark.url %></td>
+          <td><%= mark.description %></td>
+          <td><%= mark.user_id %></td>
+          <td><a href="/marks/<%= mark.id %>">Show</a>
+        </td>
+      <td><a href="/marks/<%= mark.id %>/edit">Edit</a></td>
+      <td><a href="/marks/<%= mark.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

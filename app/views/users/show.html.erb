@@ -1,0 +1,23 @@
+<h1>User #<%= @user.id %></h1>
+
+<div>
+  <strong>Name</strong>:<br />
+  <p><%= @user.name %></p>
+</div>
+<div>
+  <strong>Email</strong>:<br />
+  <p><%= @user.email %></p>
+</div>
+<ul>
+  <% @marks.each do |mark| %>
+    <li>
+      <p>
+        <a href="<%=mark.url%>"> <%=mark.name%></a> : <%=mark.description%>
+      </p>
+    </li>
+  <% end %>
+</ul>
+
+<a href="/users"> Back to Index page </a> |
+<a href="/users/<%= @user.id %>/edit">Edit</a> |
+<a href="/users/<%= @user.id %>/destroy">Destroy</a>

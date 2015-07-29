@@ -1,0 +1,36 @@
+<h1>Editing Mark #<%= @mark.id %></h1>
+
+<form action="/marks/<%= @mark.id %>/update">
+  <div>
+    <label for="name">Name of Site</label><br />
+    <input id="name" name="name" value="<%= @mark.name  %>" type="text" />
+  </div>
+  
+  <p></p>
+  
+  <div>
+    <label for="url">URL</label><br />
+    <input id="url" name="url" value="<%= @mark.url  %>" type="text" />
+  </div>
+  
+  <p></p>
+  
+  <div>
+    <label for="description">Description of Site</label><br />
+    <input id="description" name="description" value="<%= @mark.description  %>" type="text" />
+  </div>
+  
+  <p></p>
+  
+  <div>
+    <label for="user_id">User ID</label><br />
+    <input id="user_id" name="user_id" value="<%= @mark.user_id  %>" type="text" />
+  </div>
+  
+  <p></p>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+

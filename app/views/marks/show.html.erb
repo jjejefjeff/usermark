@@ -1,0 +1,32 @@
+<h1>Mark #<%= @mark.id %></h1>
+
+<div>
+  <strong>Name</strong>:<br />
+  <p><%= @mark.name %></p>
+</div>
+
+<p></p>
+
+<div>
+  <strong>Url</strong>:<br />
+  <p><%= @mark.url %></p>
+</div>
+
+<p></p>
+
+<div>
+  <strong>Description</strong>:<br />
+  <p><%= @mark.description %></p>
+</div>
+
+<p></p>
+
+<div>
+  <strong>User</strong>:<br />
+  <p><%= @user.name %></p>
+  <p><%= @user.email %></p>
+</div>
+
+<a href="/marks"> Back to Index page </a> |
+<a href="/marks/<%= @mark.id %>/edit">Edit</a> |
+<a href="/marks/<%= @mark.id %>/destroy">Destroy</a>
